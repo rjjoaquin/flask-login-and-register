@@ -10,7 +10,7 @@ from flask_bcrypt import generate_password_hash, check_password_hash
 from flask_login import LoginManager, current_user, login_user, logout_user, login_required, UserMixin
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://tester:4153@localhost/test6'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://tester:1234@localhost/test6'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = os.urandom(24)
 
