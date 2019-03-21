@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+<body>
+{% block content %}
+<form id="regform" method='POST'>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    Username: {{ form.username }} <br>
+    Email: {{ form.email }} <br>
+    Password: {{ form.password }} <br>
+    Confirm Password: {{ form.confirm }} <br>
+
+  {% if form.errors.items() %}
+  <p>The Form is met with the following errors</p>
+  <ul class="errors">{% for error in form.errors.items() %}<li>{{ error }}</li>{% endfor %}</ul>
+{% endif %}<br>
+
+<input type='submit' id='submitbtn' value='Register'>
+</form>
+{% endblock %}
+
+
+
+    
+</body>
+
+
+<footer>
+
+</html>
